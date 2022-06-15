@@ -2,8 +2,8 @@ import Users from './utils/users.js';
 
 async function isAdmin(id) {
   const user = await Users.getUserById(id);
-  const result = user.role === 'ADMIN';
-  return;
+
+  return user.role === 'ADMIN';
 }
 
 async function getUserByEmail(email) {
