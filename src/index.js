@@ -1,13 +1,9 @@
 import Users from './utils/users.js';
 
-// create
-// update
-// delete
-
 async function isAdmin(id) {
   const user = await Users.getUserById(id);
-
-  return user.role === 'ADMIN';
+  const result = user.role === 'ADMIN';
+  return;
 }
 
 async function getUserByEmail(email) {
@@ -51,3 +47,14 @@ async function updateUser(id, data) {
 
   return user;
 }
+
+export default {
+  isAdmin,
+  getUserByEmail,
+  getUserByName,
+  getUSerByRole,
+  getUserById,
+  getAllUsers,
+  createUser,
+  updateUser,
+};
